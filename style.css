@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://images.unsplash.com/photo-1617224908579-c92008fc08bb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mainBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 69%;
+  width: 70%;
+  border: 5px solid rgb(142, 12, 146);
+  background-color: rgba(255, 255, 255, 0.719);
+  /* backdrop-filter: blur(90%); */
+}
+#objContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10001;
+}
+#obj1 {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  left: 5%;
+  /* border: 1px solid red; */
+  bottom: 0%;
+  z-index: 10001;
+}
+#obj2 {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 5%;
+  bottom: 0%;
+  z-index: 10001;
+  z-index: 10001;
+}
+#scoreBoard {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  border: 5px solid green;
+  height: 50px;
+  width: 90px;
+  border-radius: 30px;
+  display: grid !important;
+  place-items: center;
+  font-size: 20px;
+}
+/* #HigestScore {
+  position: absolute;
+  right: 25%;
+  top: 2%;
+  border: 2px solid green;
+  height: 60px;
+  width: 80px;
+} */
+.obj1Ani {
+  animation-name: jump;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  transition-timing-function: linear;
+  transition-timing-function: cubic-bezier(0.21, 0.68, 0.89, 0.56);
+}
+@keyframes jump {
+  0% {
+    bottom: 0%;
+  }
+  70% {
+    bottom: 17%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+.obj2Ani {
+  animation-name: moving;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@keyframes moving {
+  0% {
+    right: 5%;
+  }
+  10% {
+    right: 10%;
+  }
+  20% {
+    right: 20%;
+  }
+  25% {
+    right: 25%;
+  }
+  45% {
+    right: 45%;
+  }
+  50% {
+    right: 50%;
+  }
+  65% {
+    right: 65%;
+  }
+  75% {
+    right: 75%;
+  }
+  85% {
+    right: 85%;
+  }
+  95% {
+    right: 95%;
+  }
+  100% {
+    right: 105%;
+  }
+}
